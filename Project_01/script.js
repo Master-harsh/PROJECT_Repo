@@ -1,39 +1,14 @@
-let buttons = document.getElementById('button');
-let body = document.querySelector('body');
+let Buttons = document.querySelectorAll('.button');
+let divBox = document.querySelector('.Container');
 
-// console.log(buttons);
-// console.log(body);
+Buttons.forEach(function(){
+    console.log(Buttons);
 
-buttons.forEach(function () {
-    console.log(buttons);
-
-    document.buttons.addEventListener("click", function(e){
-        console.log(e);
+    document.addEventListener("click", function(e){
+        // console.log(e);
 
         console.log(e.target);
         
-        switch (e.target.id) {
-            case 'gray':
-                body.style.backgroundColor = "gray";
-                break;
-
-                case 'white':
-                body.style.backgroundColor = "white";
-                break;
-
-                case 'yellow':
-                body.style.backgroundColor = "yellow";
-                break;
-
-                case 'blue':
-                body.style.backgroundColor = "blue";
-                break;
-        
-            default:
-                body.style.backgroundColor = "white";
-                break;
-        }
-
         // USING IF/ELSE 
 
         // if(e.target.id == 'gray'){
@@ -52,7 +27,32 @@ buttons.forEach(function () {
         //     divBox.style.color = "white"
         // }
 
-    });
-});
+        // USING SWITCH CASE
 
+        switch (e.target.id) {
+            case 'gray':
+                divBox.style.backgroundColor = "gray";
+                break;
+            case 'white':
+                divBox.style.backgroundColor = "white";
+                break;
+
+            case 'yellow':
+                divBox.style.backgroundColor = "yellow";
+                break;
+
+            case 'blue':
+                divBox.style.backgroundColor = "blue";
+                break;
+
+            case 'purple':
+                divBox.style.backgroundColor = "purple";
+                break;
+        
+            default:
+                divBox.style.backgroundColor = "white";
+                break;
+        }
+    });     
+});
 
